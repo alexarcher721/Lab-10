@@ -14,11 +14,5 @@ $userid = $_POST['user_id'];
 $sql = "INSERT INTO Users (user_id)
 VALUES (userid)";
 
-if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
 $conn->close();
 ?>
