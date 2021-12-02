@@ -1,0 +1,12 @@
+MySQL [a721a232]> CREATE TABLE Users
+    -> (
+    -> user_id varchar(255) NOT NULL,
+    -> PRIMARY KEY (user_id)
+    -> );
+MySQL [a721a232]> CREATE TABLE Posts
+    -> (
+    -> post_id varchar(255),
+    -> content varchar(255),
+    -> author_id varchar(255),
+    -> PRIMARY KEY (post_id)
+    -> );
