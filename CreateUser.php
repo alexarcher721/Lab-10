@@ -1,18 +1,16 @@
 <?php
-$servername = "cycle3.eecs.ku.edu";
-$username = "a721a232";
-$password = "-------"; //actual password will be used
-$dbname = "a721a232";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+$mysqli = new mysqli("cycle3.eecs.ku.edu", "a721a232", "queW7Tuj",
+"a721a232");
+/* check connection */
+if ($mysqli->connect_errno) {
+printf("Connect failed: %s\n", $mysqli->connect_error); exit();
 }
 $userid = $_POST['user_id'];
 $sql = "INSERT INTO Users (user_id)
 VALUES (userid)";
-
-$conn->close();
+/* free result set */
+$result->free();
+}
+/* close connection */
+$mysqli->close();
 ?>
